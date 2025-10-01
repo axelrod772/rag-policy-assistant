@@ -10,4 +10,4 @@ def test_build_and_search():
     retr.build(chunks)
     out = retr.search("Who regulates insurance in India?", k=3, alpha=0.6)
     assert len(out) >= 1
-    assert isinstance(out[0][1],
+    assert isinstance(out[0][1], str)

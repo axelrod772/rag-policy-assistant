@@ -1,0 +1,12 @@
+pycache/
+.venv/
+.env
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+artifacts/
+!artifacts/.gitkeep
+.notebook_checkpoints/
+.streamlit/
+.vscode/

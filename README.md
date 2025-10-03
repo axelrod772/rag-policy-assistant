@@ -13,10 +13,10 @@ Quick start
     python -m uvicorn src.app:app --reload --port 8000 (open http://127.0.0.1:8000/docs)
     streamlit run src/ui_streamlit.py (in another terminal)
 
+<!-- Architecture Diagram -->
+<img src="arc.png" alt="Architecture Diagram" width="400" height="200"/>
+
 Architecture (high level)
-
-![Architecture Diagram](data/arc.png)
-
 
 Metrics
 

@@ -15,7 +15,7 @@ Quick start
 
 <!-- Architecture Diagram -->
 Architecture (high level)
-<img src="data/arc.png" alt="Architecture Diagram" width="800" height="500"/>
+<img src="data/arc.png" alt="Architecture Diagram" width="800" height="800"/>
 
 
 

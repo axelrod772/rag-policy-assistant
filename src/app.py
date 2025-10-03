@@ -38,6 +38,8 @@ class AskIn(BaseModel):
     alpha: float = 0.6
     max_new_tokens: int = 160
     temperature: float = 0.2
+    use_reranker: bool = True
+    candidates: int = 20
 
 class AskOut(BaseModel):
     answer: str
@@ -65,6 +67,20 @@ def ask(
     if len(q) < 5:
         raise HTTPException(status_code=400, detail="Query too short.")
     results = retr.search(q, k=payload.top_k, alpha=payload.alpha)
+    # Reranker logic
+    if payload.use_reranker:
+        from src.reranker import CEReRanker
+        candidates = retr.search(q, k=payload.candidates, alpha=payload.alpha)
+        ce = CEReRanker()
+        reranked = ce.rerank(q, [(s, t) for (s, t, m) in candidates])
+        # map back top_k reranked texts to their metas (first match)
+        out_results = []
+        for score, text in reranked[:payload.top_k]:
+            for s, t, m in candidates:
+                if t == text:
+                    out_results.append((score, t, m))
+                    break
+        results = out_results
     prompt = build_prompt(q, results)
     do_sample = payload.temperature > 0.0
     out = gen(prompt, max_new_tokens=payload.max_new_tokens, temperature=payload.temperature, clean_up_tokenization_spaces=True, do_sample=do_sample)

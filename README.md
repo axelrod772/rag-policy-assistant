@@ -24,5 +24,5 @@ Recall@3 improved from 0.60 to 0.85 with reranker on sample set (n=5).
 
 Demo
 
-![Streamlit UI Screenshot](data/streamlit%20UI.png)
+![Streamlit UI Screenshot](data/streamlitUI.png)
 ![FastAPI](data/FASTapi.png)

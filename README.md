@@ -14,7 +14,7 @@ Quick start
     streamlit run src/ui_streamlit.py (in another terminal)
 
 <!-- Architecture Diagram -->
-<img src="arc.png" alt="Architecture Diagram" width="400" height="200"/>
+<img src="data/arc.png" alt="Architecture Diagram" width="400" height="200"/>
 
 Architecture (high level)
 

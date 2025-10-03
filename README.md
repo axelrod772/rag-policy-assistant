@@ -12,3 +12,17 @@ Quick start
     python -m scripts.build_index
     python -m uvicorn src.app:app --reload --port 8000 (open http://127.0.0.1:8000/docs)
     streamlit run src/ui_streamlit.py (in another terminal)
+
+Architecture (high level)
+
+![Architecture Diagram](data/arc.png)
+
+
+Metrics
+
+Recall@3 improved from 0.60 to 0.85 with reranker on sample set (n=5).
+
+Demo
+
+![Streamlit UI Screenshot](data/streamlit%20UI.png)
+![FastAPI](data/FASTapi.png)

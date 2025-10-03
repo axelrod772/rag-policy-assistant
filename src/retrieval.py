@@ -72,3 +72,8 @@ class HybridRetriever:
             scores[int(i)] = scores.get(int(i), 0.0) + (1 - alpha) * float(s)
         ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)[:k]
         return [(sc, self.texts[i], self.metas[i]) for i, sc in ranked]
+
+    def search_candidates(self, query: str, n: int = 20, alpha: float = 0.6):
+        # same as search but return top-n (score, text, meta) for reranking
+        base = self.search(query, k=n, alpha=alpha)
+        return base

@@ -1,0 +1,2 @@
+RAG Policy Assistant — Sample Policy
+Policy ID: DEMO-001. Eligibility: Full-time employees after 90 days. Pre-existing conditions: 12-month waiting period per Section 4.2. Claims require: claim form, medical bills, proof of eligibility.

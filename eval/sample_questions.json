@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is the waiting period for pre-existing conditions?",
+    "ground_truth": "The waiting period for pre-existing conditions is 12 months as defined in Section 4.2."
+  },
+  {
+    "question": "Who is eligible for coverage?",
+    "ground_truth": "Full-time employees and their dependents are eligible after 90 days of employment."
+  },
+  {
+    "question": "What documents are required for claims?",
+    "ground_truth": "Claim form, supporting medical bills, and proof of eligibility as per policy."
+  }
+]
